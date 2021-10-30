@@ -1,0 +1,35 @@
+<h2>Creat New Meal</h2>
+
+<br>
+
+<form [formGroup]="MealForm" (ngSubmit)= "save()">
+
+  <div class="form-group">
+    <label for="nome">Image Url:</label>
+    <input type="text" class="form-control" name="name" id="nome" formControlName="image">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Name:</label>
+    <input type="text" class="form-control" name="name" id="nome" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Category:</label>
+    <input type="text" class="form-control" name="name" id="nome" formControlName="category">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Area:</label>
+    <input type="text" class="form-control" name="name" id="nome" formControlName="area">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Cooking Instructions:</label>
+   <textarea type="text" class="form-control" name="name" id="nome" formControlName="instructions">  </textarea>
+  </div>
+
+  <input type="submit" class="btn btn-primary mt-4" value="Save">
+  <a href="#" class="btn btn-secondary mt-4 ml-2">Back</a>
+
+</form>

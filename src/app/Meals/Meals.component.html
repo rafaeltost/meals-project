@@ -1,0 +1,53 @@
+<h2>
+  Meals List
+</h2>
+
+<br>
+
+<div class = "form-group row">
+
+  <label class="col-sm-2 col-form-label"> Filter By:</label>
+
+  <div class="col-sm-10">
+    <input [(ngModel)] = "filter" class="form-control">
+  </div>
+
+</div>
+
+<br>
+
+<td>
+  <a [routerLink]="['/create']" class="btn btn-primary mr-2">Create new meal</a>
+</td>
+
+<br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Visualization</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Area</th>
+      <th>Cooking Instructions</th>
+    </tr>
+  </thead>
+  <tbody *ngIf= "filteredMeals && filteredMeals.length">
+    <tr *ngFor="let meal of filteredMeals">
+      <td> <img src={{meal.image}} height="150" width="150"></td>
+      <td>{{meal.name}}</td>
+      <td>{{meal.category}}</td>
+      <td>{{meal.area}}</td>
+      <td>{{meal.instructions}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr *ngIf= "!filteredMeals.length">
+      <td colspan="7" class= "text-center">
+      <h4>
+        Search for a registered meal.
+      </h4>
+    </td>
+    </tr>
+  </tfoot>
+</table>
