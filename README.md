@@ -36,3 +36,13 @@ Para ficar mais próximo de um cenário real, foi incrementado o método "Creat 
 
 **IMPORTANTE 02:** A rota default da API esta configurada com o Heroku. Porém, o servidor entra no modo sleeping após 30 minutos de inatividade. Caso algum problema aconteça com as requisições ou deseje trabalhar de forma local, é necessário modificar manualmente a rota da API no arquivo `Meals.service.ts`  para `http://localhost:8080/api/v1/meals` . Dessa forma poderá rodar os dois projetos ao mesmo tempo na maquina.
 
+
+
+**Visão geral do projeto com lista de refeições adicionada:**
+
+![9a26f0f1-8e71-4526-8023-6f828b66a387](C:\Users\Rafael\Desktop\9a26f0f1-8e71-4526-8023-6f828b66a387.jpg)
+
+**Filtragem:**
+
+![c117e3dd-a8c6-41b9-a5e8-e4a6bebc4af2](C:\Users\Rafael\Desktop\c117e3dd-a8c6-41b9-a5e8-e4a6bebc4af2.jpg)
+
