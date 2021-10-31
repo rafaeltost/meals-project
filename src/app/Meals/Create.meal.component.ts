@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {FormBuilder,  FormGroup} from "@angular/forms";
+import {FormBuilder,  FormGroup, Validators} from "@angular/forms";
 import { Router } from "@angular/router";
 import { Meal } from "./Meal";
 import { MealsServices } from "./Meals.services";
@@ -13,6 +13,11 @@ export class CreateMealCompoment implements OnInit{
 
   meal: Meal;
 
+  get formControls(): any{
+    return this.MealForm.controls
+  }
+
+
   constructor(private mealsservices: MealsServices, private formBuilder: FormBuilder,private router: Router ){}
 
   ngOnInit(): void {
@@ -21,11 +26,11 @@ export class CreateMealCompoment implements OnInit{
 
   createForm(meal: Meal) {
     this.MealForm = this.formBuilder.group({
-      image: [meal.image],
-      name: [meal.name],
-      category: [meal.category],
-      area: [meal.area],
-      instructions:[meal.instructions]
+      image: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      category: ['',[Validators.required]],
+      area: ['',[Validators.required]],
+      instructions:['',[Validators.required]]
     })
   }
 
@@ -36,6 +41,7 @@ export class CreateMealCompoment implements OnInit{
         error: err => console.log('Error', err)
     });
     this.router.navigate(['']);
+    this.mealsservices.retrieveAll();
   }
 
 }

@@ -9,7 +9,7 @@ import { Meal } from "./Meal";
 )
 export class MealsServices{
 
-  // Conexão local
+  // Conexão local:
  // private mealsUrl: string = 'http://localhost:8080/api/v1/meals';
 
  private mealsUrl: string = 'https://meals-project-api.herokuapp.com/api/v1/meals';

@@ -31,16 +31,21 @@ export class MealsComponent implements OnInit {
 
     }
 
-
-  set filter(value: string){
+  set filterBy(value: string){
     this._filterBy = value;
-
-    this.filteredMeals = this._meals.filter((meal:Meal) => meal.name.toLocaleLowerCase()
-                        .indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    this.filteredMeals = this.filterBy ? this.filterMeal(this.filterBy) : this._meals;
   }
 
-  get filter(){
+  get filterBy(){
     return this._filterBy;
   }
+
+  filterMeal(filter: string): any {
+    filter = filter.toLocaleLowerCase();
+
+    return this._meals.filter(meal=> meal.name.toLocaleLowerCase()
+    .indexOf(filter) !=-1);
+  }
+
 
 }

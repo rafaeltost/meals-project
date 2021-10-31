@@ -6,30 +6,55 @@
 
   <div class="form-group">
     <label for="nome">Image Url:</label>
-    <input type="text" class="form-control" name="name" id="nome" formControlName="image">
+    <input type="text" class="form-control"
+    [ngClass]="{'is-invalid': formControls.image.errors && formControls.image.touched }"
+     formControlName="image">
+    <div class="invalid-feedback">
+      Url is required.
+    </div>
   </div>
 
   <div class="form-group">
     <label for="nome">Name:</label>
-    <input type="text" class="form-control" name="name" id="nome" formControlName="name">
+    <input type="text" class="form-control"
+    [ngClass]="{'is-invalid': formControls.name.errors && formControls.name.touched }"
+      formControlName="name">
+    <div class="invalid-feedback">
+      Name is required.
+    </div>
   </div>
 
   <div class="form-group">
     <label for="nome">Category:</label>
-    <input type="text" class="form-control" name="name" id="nome" formControlName="category">
+    <input type="text" class="form-control"
+    [ngClass]="{'is-invalid': formControls.category.errors && formControls.category.touched }"
+    formControlName="category">
+    <div class="invalid-feedback">
+     Category is required.
+    </div>
   </div>
 
   <div class="form-group">
     <label for="nome">Area:</label>
-    <input type="text" class="form-control" name="name" id="nome" formControlName="area">
+    <input type="text" class="form-control"
+    [ngClass]="{'is-invalid': formControls.area.errors && formControls.area.touched }"
+    formControlName="area">
+    <div class="invalid-feedback">
+      Area is required.
+    </div>
   </div>
 
   <div class="form-group">
     <label for="nome">Cooking Instructions:</label>
-   <textarea type="text" class="form-control" name="name" id="nome" formControlName="instructions">  </textarea>
+   <textarea type="text" class="form-control"
+   [ngClass]="{'is-invalid': formControls.instructions.errors && formControls.instructions.touched }"
+   formControlName="instructions"></textarea>
+   <div class="invalid-feedback">
+    Cooking instructions is required.
+  </div>
   </div>
 
-  <input type="submit" class="btn btn-primary mt-4" value="Save">
+  <input type="submit" class="btn btn-primary mt-4" [disabled]='!MealForm.valid' value="Save">
   <a href="#" class="btn btn-secondary mt-4 ml-2">Back</a>
 
 </form>
