@@ -40,9 +40,9 @@ Para ficar mais próximo de um cenário real, foi incrementado o método "Creat 
 
 **Visão geral do projeto com lista de refeições adicionada:**
 
-![9a26f0f1-8e71-4526-8023-6f828b66a387](C:\Users\Rafael\Desktop\9a26f0f1-8e71-4526-8023-6f828b66a387.jpg)
+![9a26f0f1-8e71-4526-8023-6f828b66a387](https://user-images.githubusercontent.com/81890027/139599873-e96f992f-6ffd-46ec-b8e5-b44916a8b324.jpg)
 
 **Filtragem:**
 
-![c117e3dd-a8c6-41b9-a5e8-e4a6bebc4af2](C:\Users\Rafael\Desktop\c117e3dd-a8c6-41b9-a5e8-e4a6bebc4af2.jpg)
+![c117e3dd-a8c6-41b9-a5e8-e4a6bebc4af2](https://user-images.githubusercontent.com/81890027/139599908-13b99dc3-89ea-4cdb-bd9e-5ce983e360f6.jpg)
 
